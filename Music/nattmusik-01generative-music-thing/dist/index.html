@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Nattmusik 01 - Generative Music Thing</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1>NattMusik</h1>
+<script type="text/shader" id="2d-vertex-shader">
+attribute vec2 a_position;
+
+void main() {
+  gl_Position = vec4(a_position, 0, 1);
+}
+</script>
+<script type="text/shader" id="2d-fragment-shader">
+void main() {
+  gl_FragColor = vec4(0,1,0,1);  // green
+}
+</script>
+
+<canvas id="canvas" width="500" height="500"></canvas>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

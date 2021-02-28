@@ -1,0 +1,20 @@
+body {
+            margin: 0;
+            overflow: hidden;
+        }
+        canvas {
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+#scale {
+  position: absolute;
+  bottom: 2vh;
+  left: 2vw;
+  z-index:100;
+  color: white;
+  font-family: monospace;
+  font-size: 3vh;
+}

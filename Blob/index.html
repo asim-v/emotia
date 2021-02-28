@@ -32,7 +32,7 @@
   // movement variables
   vec3 movement = vec3(.0);
   
-  const int maxIterations = 256;
+  const int maxIterations = 4;
   const float stopThreshold = 0.001;
   const float stepScale = .8;
   const float eps = 0.005;
@@ -40,9 +40,9 @@
   const vec3 fogColour = vec3(0.);
   
   const vec3 light1_position = vec3(0, 1., -1.);
-  const vec3 light1_colour = vec3(.5, .8, 1.85);
+  const vec3 light1_colour = vec3(1.35, .8, 1.85);
   
-  const int octaves = 3;
+  const int octaves = 0;
   
   struct Surface {
     int object_id;
@@ -58,7 +58,6 @@
   }
   
   float fractalBumps(in vec3 p, float phase, float size, vec3 frequency, float multiplier) {
-    // const float octaves = 2.;
     float _bumps = bumps(p, phase, size, frequency);
     for(int i = 1; i < octaves; i++) {
       float f = float(i);
@@ -173,6 +172,6 @@
 </script>
 <!-- partial -->
   <script  src="./script.js"></script>
-
+  <script type="text/javascript" src="./interface.js"></script>
 </body>
 </html>
