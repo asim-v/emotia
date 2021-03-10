@@ -1,0 +1,239 @@
+/*MENU CONTAIENRS*/
+html{
+	background: black;
+}
+
+.blur-filter{
+	filter: blur(6px) opacity(0.5);
+	
+}
+
+.menu{
+  z-index: 10;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: 0.2s;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  backdrop-filter:blur(3px);
+}
+.menu .contents{
+	color: white;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  position: relative;
+    background: #00000052;
+    padding:100%;
+    box-shadow: 3px 3px 5px #00000040;
+    padding-left: 180px;
+    padding-right: 60px;    
+    font-family: 'Poppins', sans-serif;
+}
+.menu .contents h1{
+	font-size: 35px;
+}
+
+
+.menu .view{
+  grid-row-start: 1;
+  grid-column-start: 1;  
+  
+  transition: 0.2s;
+}
+
+.menu h4{
+  color: #ffffff1f;
+  transition: 0.2s;
+}
+.menu h4:hover{
+  color: white;
+}
+
+.back_home{
+    padding: 20px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    background: #00000000;
+    border: 1px solid #ffffff1f;
+    border-radius: 5px;
+    color: #ffffff2e;
+}
+
+.slide_container{
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.slide{
+  grid-row-start: 1;
+  grid-column-start: 1;  
+  
+  transition: 0.5s;
+}
+
+.select-style {
+    font-size: inherit;
+    color: inherit;
+    font-family: inherit;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding-left: 20px;
+
+}
+
+.select-style select {
+    padding: 5px 8px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+
+.select-style select:focus {
+    outline: none;
+}
+
+
+/*BUTTON*/
+.slide_button{
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background: transparent;
+    font-family: 'Poppins';
+    border-radius: 5px;
+    color: white;  
+    border:1px solid white;
+    z-index: 10;
+}
+.button {
+  touch-callout: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: inline-block;
+  border: 0.1em solid;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  opacity: 0.8;
+  color: #FFF;
+}
+.button__text {
+  display: block;
+  padding: 0.7em 2em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.button__text:before {
+  content: attr(title);
+}
+.button__text--bis {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateX(-1em);
+  opacity: 0;
+}
+.button__mask {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  transform: translateX(-100%) rotate(45deg);
+  transition: all 0.3s;
+}
+
+.button:hover {
+  opacity: 1;
+}
+.button:hover .button__text {
+  -webkit-animation: fx-text 0.3s ease-out;
+          animation: fx-text 0.3s ease-out;
+}
+.button:hover .button__text--bis {
+  -webkit-animation: fx-text-bis 0.3s ease-out;
+          animation: fx-text-bis 0.3s ease-out;
+}
+.button:hover .button__mask {
+  -webkit-animation: fx-mask 0.3s ease-out;
+          animation: fx-mask 0.3s ease-out;
+}
+
+.button:active {
+  opacity: 1;
+  background: white;
+  color: inherit;
+}
+
+@-webkit-keyframes fx-mask {
+  0% {
+    transform: translateX(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(45deg);
+  }
+}
+
+@keyframes fx-mask {
+  0% {
+    transform: translateX(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(45deg);
+  }
+}
+@-webkit-keyframes fx-text {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(1em);
+    opacity: 0;
+  }
+}
+@keyframes fx-text {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(1em);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fx-text-bis {
+  0% {
+    transform: translateX(-1em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fx-text-bis {
+  0% {
+    transform: translateX(-1em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
